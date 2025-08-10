@@ -31,6 +31,7 @@ class LoginRequest extends FormRequest
     {
         return [
             'email' => ['required', 'string', 'email'],
+            'remember' => ['boolean'],
         ];
     }
 
@@ -63,7 +64,7 @@ class LoginRequest extends FormRequest
         RateLimiter::hit($this->throttleKey(), 300);
 
         try {
-            $otp = (new SendOtp)->handle($this->email, $this->remember ?? false);
+            $otp = (new SendOtp)->handle($this->string('email'), $this->boolean('remember') ?? false);
         } catch (OtpThrottleException $e) {
             throw ValidationException::withMessages([
                 'email' => $e->getMessage(),

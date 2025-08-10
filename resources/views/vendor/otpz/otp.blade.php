@@ -34,21 +34,23 @@
     </head>
 
     <body
-        class="{{-- dark --}}min-h-screen flex flex-col items-center justify-center bg-white antialiased dark:bg-zinc-900"
+        class="{{-- dark --}} min-h-screen flex flex-col items-center justify-center bg-white antialiased dark:bg-zinc-900"
     >
         <div class="flex w-full max-w-md flex-col items-center space-y-6 px-6">
             <div class="flex justify-center opacity-50">
                 <a href="/" class="group flex items-center gap-3">
-                    <x-application-logo
-                        class="h-20 w-20 fill-current text-zinc-800 dark:text-zinc-400"
-                    />
+                    @if(View::exists('components.application-logo'))
+                        <x-application-logo
+                            class="h-20 w-20 fill-current text-zinc-800 dark:text-zinc-400"
+                        />
+                    @endif
                 </a>
             </div>
 
             <div
                 class="mb-2 text-center text-2xl font-medium text-zinc-800 dark:text-white"
             >
-			    {{ __('Sign-in to :app_name', ['app_name' => config('app.name')]) }}
+                {{ __('Sign-in to :app_name', ['app_name' => config('app.name')]) }}
                 <div class="mt-2 text-sm text-zinc-500 dark:text-white/70">
                     {!! __('Enter the alpha numeric code sent to :user_email', ['user_email' => '<span class="font-semibold">' . $email . '</span>']) !!}
                     {{ __('. The code is case insensitive and dashes will be added automatically.') }}

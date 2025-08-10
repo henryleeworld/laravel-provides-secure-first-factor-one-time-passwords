@@ -1,4 +1,4 @@
-# Laravel 11 提供安全第一個因素的一次性密碼
+# Laravel 12 提供安全第一個因素的一次性密碼
 
 引入 benbjurstrom 的 otpz 套件來擴增提供安全第一個因素的一次性密碼，一次性密碼透過要求自動產生一個只有帳號持有人知道的臨時密碼，協助保護帳號免受未經授權的存取。
 
@@ -35,11 +35,11 @@ $ npm run build
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/ZkkfTWM.png)
+![](https://i.imgur.com/7xSOXnL.png)
 > 一次性密碼會透過註冊的電子郵件地址傳送給使用者
 
-![](https://i.imgur.com/F9F8OXG.png)
+![](https://i.imgur.com/d7CQ2Xr.png)
 > 一次性密碼只在設定的時間內有效一次
 
-![](https://i.imgur.com/CxIruMU.png)
+![](https://i.imgur.com/ub9Ruqk.png)
 > 使用者在必填欄位中輸入一次性密碼來驗證身份
