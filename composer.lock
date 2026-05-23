@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3dccd601edcf0a1a9549c37bb8b36ca5",
+    "content-hash": "7d1a5e708b27c85a829de5e5aedeaae7",
     "packages": [
         {
             "name": "benbjurstrom/otpz",
